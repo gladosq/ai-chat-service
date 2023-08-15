@@ -22,7 +22,7 @@ export default function BotChat() {
 
   const getBotMessageData = async (newMessage: string) => {
     const response = await axios.post(
-      'http://185.46.8.130/api/v1/chat/send-message', {message: newMessage}
+      `http://185.46.8.130/api/v1/chat/send-message`, {message: newMessage}
     );
 
     const result = decodeToCorrectJson(response.data);

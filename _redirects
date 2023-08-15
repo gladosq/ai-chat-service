@@ -1,1 +1,5 @@
-/api/chat/send-message/* http://185.46.8.130/api/v1/chat/:splat 200!
+[[redirects]]
+  from = "https://ai-chat-service.netlify.app/api/*"
+  to = "http://185.46.8.130/api/v1/chat/send-message:splat"
+  status = 200
+  force = true
