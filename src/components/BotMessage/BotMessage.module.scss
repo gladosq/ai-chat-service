@@ -1,0 +1,115 @@
+.wrapper {
+  animation: fadeInLeft 0.7s ease-in-out forwards;
+}
+
+.wrapperInner {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+
+  @media (max-width: 800px) {
+    gap: 6px;
+  }
+}
+
+.message {
+  border-radius: 28px;
+  background: rgba(34, 118, 245, 0.20);
+  padding: 8px 20px;
+  font-size: 14px;
+  max-width: 50%;
+  position: relative;
+
+  @media (max-width: 800px) {
+    max-width: 60%;
+    border-radius: 18px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+.buttonWrapper {
+  display: flex;
+  margin-bottom: 10px;
+  max-height: 20px;
+  transition: 0.25s ease-in-out;
+  transition-property: max-height, margin-bottom;
+  overflow: hidden;
+}
+
+.stopButton {
+  background: transparent;
+  border: 0;
+  color: #5b2525;
+  font-size: 13px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  transition: 0.25s ease-in-out;
+  transition-property: color, transform;
+  cursor: pointer;
+
+  &:hover {
+    color: #ab0f0f;
+    transform: translateX(6px);
+  }
+}
+
+.avatar {
+  background: #007AFE;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  @media (max-width: 800px) {
+    width: 30px;
+    height: 30px;
+
+    svg {
+      width: 18px;
+    }
+  }
+}
+
+.buttonWrapperHidden {
+  max-height: 0;
+  margin-bottom: 0;
+
+}
+
+.messageStopped {
+  max-height: 22px;
+  overflow: hidden;
+  line-height: 24px;
+
+  &::before {
+    content: "Поток остановлен";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgba(234, 78, 95, 0.7) 30%, rgba(234, 78, 95, 1) 70%);
+    color: #ffffff;
+    font-size: 17px;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
