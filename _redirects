@@ -1,1 +1,1 @@
-/chat/send-message/* http://185.46.8.130/api/v1/chat/send-message:splat 200!
+/api/chat/send-message/* http://185.46.8.130/api/v1/chat/:splat 200!
