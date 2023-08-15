@@ -22,7 +22,7 @@ export default function BotChat() {
 
   const getBotMessageData = async (newMessage: string) => {
     const response = await axios.post(
-      `https://ai-chat-service.netlify.app/api/chat/send-message`, {message: newMessage}
+      `https://ai-chat-service.netlify.app/v1/chat/send-message`, {message: newMessage}
     );
 
     const result = decodeToCorrectJson(response.data);
